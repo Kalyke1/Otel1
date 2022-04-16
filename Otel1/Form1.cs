@@ -16,6 +16,31 @@ namespace Otel1
         {
             InitializeComponent();
         }
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (textBox1.Text == ("123"))
+            {
+                if (textBox2.Text == ("123"))
+                {
+                    MessageBox.Show("Şifre Doğrulandı");
+                    var form = new Form2();
+                    form.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Kullanıcı Adı/Şifre yanlış");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Kullanıcı Adı/Şifre yanlış");
+            }
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
