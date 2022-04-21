@@ -2,8 +2,14 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OtelManager.Common\OtelManager.Common.csproj" />
+    <ProjectReference Include="..\OtelManager.DataAccess\OtelManager.DataAccess.csproj" />
+    <ProjectReference Include="..\OtelManager.ViewModel\OtelManager.ViewModel.csproj" />
+  </ItemGroup>
 
 </Project>

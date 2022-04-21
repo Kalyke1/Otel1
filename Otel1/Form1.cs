@@ -23,9 +23,9 @@ namespace Otel1
                 if (textBox2.Text == ("123"))
                 {
                     MessageBox.Show("Şifre Doğrulandı");
-                    var form = new Form2();
+                    var form = new Form2(this);
                     form.Show();
-                    this.Hide();
+                   
                 }
                 else
                 {
@@ -41,6 +41,16 @@ namespace Otel1
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string theDate = DateTime.Now.ToString("h:mm:ss tt");
+            label4.Text=" ";
         }
     }
 }

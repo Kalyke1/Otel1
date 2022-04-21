@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Otel1", "Otel1\Otel1.csproj", "{01D8AAAA-8688-4C71-ADBA-AD73267CA7FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Otel1", "Otel1\Otel1.csproj", "{01D8AAAA-8688-4C71-ADBA-AD73267CA7FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{4C5B91CF-AE25-41E3-8F49-89E76BD49F19}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtelManager.ViewModel", "OtelManager.ViewModel\OtelManager.ViewModel.csproj", "{90D9ACA5-3DF8-4DEB-A3AE-A95E809BB0E3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OtelManager.Common", "OtelManager.Common\OtelManager.Common.csproj", "{07198AED-BC31-4AB0-88DB-B44891E94F1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtelManager.DataAccess", "OtelManager.DataAccess\OtelManager.DataAccess.csproj", "{2F9A33ED-77BB-476C-A33D-4779489245CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +23,26 @@ Global
 		{01D8AAAA-8688-4C71-ADBA-AD73267CA7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01D8AAAA-8688-4C71-ADBA-AD73267CA7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01D8AAAA-8688-4C71-ADBA-AD73267CA7FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90D9ACA5-3DF8-4DEB-A3AE-A95E809BB0E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90D9ACA5-3DF8-4DEB-A3AE-A95E809BB0E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90D9ACA5-3DF8-4DEB-A3AE-A95E809BB0E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90D9ACA5-3DF8-4DEB-A3AE-A95E809BB0E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07198AED-BC31-4AB0-88DB-B44891E94F1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07198AED-BC31-4AB0-88DB-B44891E94F1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07198AED-BC31-4AB0-88DB-B44891E94F1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07198AED-BC31-4AB0-88DB-B44891E94F1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F9A33ED-77BB-476C-A33D-4779489245CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F9A33ED-77BB-476C-A33D-4779489245CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F9A33ED-77BB-476C-A33D-4779489245CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F9A33ED-77BB-476C-A33D-4779489245CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{90D9ACA5-3DF8-4DEB-A3AE-A95E809BB0E3} = {4C5B91CF-AE25-41E3-8F49-89E76BD49F19}
+		{07198AED-BC31-4AB0-88DB-B44891E94F1A} = {4C5B91CF-AE25-41E3-8F49-89E76BD49F19}
+		{2F9A33ED-77BB-476C-A33D-4779489245CE} = {4C5B91CF-AE25-41E3-8F49-89E76BD49F19}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {79063F38-52A6-4A50-A9E0-FFEF4059E755}
