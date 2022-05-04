@@ -20,7 +20,7 @@ namespace OtelManager.DataAccess
           PhoneNumber = "05491234567",
           CheckInDate = new DateTime(2022, 10, 1),
           CheckOutDate = new DateTime(2022, 10, 5),
-          AdultCount = 2,
+          AdultCount = 3,
           ChildCount = 1,
           RoomId = 1,
           IsBreakfast = true,
@@ -39,7 +39,22 @@ namespace OtelManager.DataAccess
           ChildCount = 0,
           RoomId = 2,
           IsBreakfast = true,
-          IsDinner = false,
+          IsDinner = true,
+          ReservationStatusId = 2
+        },
+        new Reservation
+        {
+          Id = 3,
+          FirstName = "Mert Berke",
+          SurName =  "Göze",
+          PhoneNumber = "05308769880",
+          CheckInDate = new DateTime(2022, 12, 10),
+          CheckOutDate = new DateTime(2022, 12, 15),
+          AdultCount = 1,
+          ChildCount = 0,
+          RoomId = 2,
+          IsBreakfast = false,
+          IsDinner = true,
           ReservationStatusId = 2
         }
       };
@@ -67,7 +82,7 @@ namespace OtelManager.DataAccess
         new Room
         {
           Id = 1,
-          RoomName = "2221",
+          RoomName = "Deniz Manzaralı - 2221",
           BedCount =  4,
           RoomTypeId = 3,
           AdultPrice = 200,
@@ -76,7 +91,7 @@ namespace OtelManager.DataAccess
         new Room
         {
           Id = 2,
-          RoomName = "2222",
+          RoomName = "Doğa Manzaralı - 2222",
           BedCount =  2,
           RoomTypeId = 1,
           AdultPrice = 250,

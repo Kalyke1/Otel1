@@ -37,7 +37,37 @@ namespace OtelManager.ViewModel
       }
     }
 
-    public DateTimeOffset CheckInDate
+    public string SurName
+    {
+        get => _reservation.SurName;
+        set
+        {
+            if (_reservation.SurName != value)
+            {
+                _reservation.SurName = value;
+                RaisePropertyChanged();
+                RaisePropertyChanged(nameof(CanSave));
+                SaveCommand.RaiseCanExecuteChanged();
+            }
+        }
+    }
+
+    public string PhoneNumber
+        {
+        get => _reservation.PhoneNumber;
+        set
+        {
+            if (_reservation.PhoneNumber != value)
+            {
+                _reservation.PhoneNumber = value;
+                RaisePropertyChanged();
+                RaisePropertyChanged(nameof(CanSave));
+                SaveCommand.RaiseCanExecuteChanged();
+            }
+        }
+    }
+
+        public DateTimeOffset CheckInDate
         {
       get => _reservation.CheckInDate;
       set
@@ -50,8 +80,35 @@ namespace OtelManager.ViewModel
       }
     }
 
+        public DateTime CheckInDateTime
+        {
+            get => _reservation.CheckInDate.DateTime;
+            set
+            {
+                if (_reservation.CheckInDate != value)
+                {
+                    _reservation.CheckInDate = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
 
-    public int AdultCount
+
+        public DateTime CheckOutDateTime
+        {
+            get => _reservation.CheckOutDate.DateTime;
+            set
+            {
+                if (_reservation.CheckOutDate != value)
+                {
+                    _reservation.CheckOutDate = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+        
+
+        public int AdultCount
         {
       get => _reservation.AdultCount;
       set
@@ -63,8 +120,21 @@ namespace OtelManager.ViewModel
         }
       }
     }
+        public int ChildCount
+        {
+            get => _reservation.ChildCount;
+            set
+            {
+                if (_reservation.ChildCount != value)
+                {
+                    _reservation.ChildCount = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
 
-    public bool IsBreakfast
+
+        public bool IsBreakfast
         {
       get => _reservation.IsBreakfast;
       set
@@ -76,12 +146,57 @@ namespace OtelManager.ViewModel
         }
       }
     }
+        public bool IsDinner
+        {
+            get => _reservation.IsDinner;
+            set
+            {
+                if (_reservation.IsDinner != value)
+                {
+                    _reservation.IsDinner = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
 
-    public bool CanSave => !string.IsNullOrEmpty(FirstName);
+
+        public int RoomId
+    {
+        get => _reservation.RoomId;
+        set
+        {
+            if (_reservation.RoomId != value)
+            {
+                _reservation.RoomId = value;
+                RaisePropertyChanged();
+            }
+        }
+    }
+
+        public bool CanSave => !string.IsNullOrEmpty(FirstName);
 
     public void Save()
     {
-        _otelDataProvider.SaveReservation(_reservation);
+            _otelDataProvider.SaveReservation(_reservation); 
     }
-  }
+
+
+
+
+    public string ListItemRsv
+    {
+            get => _reservation.FirstName + " " + _reservation.SurName;
+        set
+        {
+                if (_reservation.FirstName != value)
+            {
+                _reservation.FirstName = value;
+                RaisePropertyChanged();
+                RaisePropertyChanged(nameof(CanSave));
+                SaveCommand.RaiseCanExecuteChanged();
+            }
+        }
+    }
+
+    }
 }
